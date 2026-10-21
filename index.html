@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Player Stats</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div><p class="eyebrow">CPIT 405 · LAB 05</p><h1>NBA Player Stats</h1><p>Explore and compare player statistics</p></div>
+      <button id="dark-mode-toggle" type="button" aria-pressed="false">Toggle Dark Mode</button>
+    </header>
+    <section class="summary" aria-label="Dashboard overview"><div class="stat"><span>Total Players</span><strong id="total-players">0</strong></div><div class="stat"><span>Showing</span><strong id="visible-players">0</strong></div><div class="stat"><span>Teams</span><strong id="total-teams">0</strong></div></section>
+    <section class="table-panel"><div class="table-filters"><label class="filter"><span>Search player</span><input type="search" id="search" placeholder="Search players..." autocomplete="off"></label><label class="filter"><span>Filter by team</span><select id="team-filter"><option value="all">All Teams</option></select></label></div><p class="hint">Click a column heading to sort · Hover over a row to highlight it</p><div class="table-scroll"><table id="player-stats"><thead><tr><th data-key="name" tabindex="0">Name ↕</th><th data-key="team" tabindex="0">Team ↕</th><th data-key="points" tabindex="0">Points ↕</th><th data-key="rebounds" tabindex="0">Rebounds ↕</th><th data-key="assists" tabindex="0">Assists ↕</th></tr></thead><tbody id="player-rows"></tbody></table></div><p id="no-results" hidden>No players found. Try another search or team.</p></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
